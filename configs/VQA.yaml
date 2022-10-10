@@ -1,0 +1,31 @@
+train_file: ['../openvqa/data/vizwiz/raw/train.json']
+             
+test_file: ['../openvqa/data/vizwiz/raw/val.json']
+answer_list: 'data/answer_list.json'
+
+vqa_root: '../openvqa/vqa_train/train_vizwiz/'
+#vqa_root: '/export/share/datasets/vision/VQA/Images/mscoco/' #train2014/
+#vg_root: '/export/share/datasets/vision/visual-genome/'  #image/
+
+image_res: 384
+batch_size_train: 2
+batch_size_test: 1
+k_test: 128
+
+alpha: 0.4
+distill: True
+warm_up: True
+
+eos: '[SEP]'
+
+bert_config: 'configs/config_bert.json'
+
+optimizer: {opt: adamW, lr: 0.0002, weight_decay: 0.00}
+schedular: {sched: cosine, lr: 0.0002, epochs: 8, min_lr: 0.000001, decay_rate: 1, warmup_lr: 0.0001, warmup_epochs: 4, cooldown_epochs: 0}
+
+
+
+
+
+
+
