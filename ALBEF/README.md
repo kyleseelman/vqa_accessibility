@@ -2,6 +2,8 @@
 
 We adapted the code from: https://github.com/salesforce/ALBEF to run with VizWiz. To reproduce our results for VQA follow their instructions exactly. To reporduce our VizWiz results, use "vizwiz" instead. 
 
+To evaluate the results, run "python vizwiz_eval.py" or "python vqa_eval.py", just adapting the path for the files. 
+
 
 ### Citation
 If you find this code to be useful for your research, please consider citing.
